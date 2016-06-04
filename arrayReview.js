@@ -7,7 +7,7 @@ var last = function() {
   console.log(threeItems[(threeItems.length -1)]);
 }
 
-// last(threeItems);
+last(threeItems);
 
 
 
@@ -118,9 +118,17 @@ var myPoem = 'What is a jQuery but a misunderstood object?'
 //What is a jQuery but a misunderstood object? --> What Is A JQuery But A Misunderstood Object?
 
   //code here
-var capitalize = function(str) {
+  var capitalize = function(poem) {
+  	var newPoem;
+  	var poemArr = poem.split(" ");
+  	var newPoemArr = [];
+  	for (var i = 0; i < poemArr.length; i++) {
+  		newPoemArr.push(poemArr[i].charAt(0).toUpperCase() + poemArr[i].slice(1));
+  	}
+  	return newPoem = newPoemArr.join(" ");
+  };
 
-}
+  capitalize(myPoem); //invoke the function
 
 
 /* NEXT PROBLEM - NEXT PROBLEM - NEXT PROBLEM */
@@ -129,3 +137,11 @@ var capitalize = function(str) {
 
 var theOdyssey = "function expression or function declaration? Tis an obvious choice";
 //Write a function called vowelCounter that takes in a string (theOdyssey) and returns how many vowels are in that string.
+
+var vowelCounter = function(str) {
+  var vowels = str.split(" ");
+  
+}
+
+
+vowelCounter(theOdyssey);
